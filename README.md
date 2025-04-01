@@ -1,75 +1,29 @@
-# Nuxt Minimal Starter
+# 🍽️ Foodzy - Nuxt Minimal Starter
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+Welcome to **Foodzy**, a Nuxt 3-based modern food e-commerce starter project.  
+This project leverages the power of **Nuxt 3**, **TypeScript**, **Tailwind CSS**, and **Iconify** for building scalable and elegant UIs.
 
-## Setup
+---
 
-Make sure to install dependencies:
+## 📖 Documentation
+
+Check out the official [Nuxt Documentation](https://nuxt.com/docs/getting-started/introduction) to learn more about Nuxt 3.
+
+---
+
+## ⚙️ Setup
+
+Install dependencies:
 
 ```bash
-# npm
+# With npm
 npm install
 
-# pnpm
+# Or with pnpm
 pnpm install
 
-# yarn
+# Or with yarn
 yarn install
 
-# bun
+# Or with bun
 bun install
-```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.

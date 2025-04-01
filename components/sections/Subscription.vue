@@ -33,7 +33,7 @@
 
             <!-- Button -->
             <button
-              class="w-full md:w-auto bg-[#f44336] text-white mr-7 px-9 py-4 text-sm font-semibold hover:bg-[#d9372d] transition rounded-full md:rounded-r-full"
+              class="w-full md:w-auto bg-[#f44336] text-white mr-7 px-9 py-4 text-sm font-semibold hover:bg-[#d9372d] transition rounded-full md:rounded-r-full cursor-pointer"
             >
               {{ formData.buttonText }}
             </button>
