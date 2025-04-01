@@ -1,35 +1,3 @@
-<script setup lang="ts">
-import { ref } from "vue";
-import { Icon } from "@iconify/vue";
-
-const isMenuOpen = ref(false);
-
-const props = defineProps<{
-  links: Array<{
-    id: number;
-    label: string;
-    url: string;
-    hasDropdown: boolean;
-  }>;
-  users: Array<{
-    id: number;
-    label: string;
-    icon: string;
-    url: string;
-  }>;
-  phones: Array<{
-    id: number;
-    icon: string;
-    tel: string;
-  }>;
-  titles: Array<{
-    id: number;
-    title: string;
-    subtitle: string;
-  }>;
-}>();
-</script>
-
 <template>
   <header class="bg-white">
     <!-- Top Navigation Bar (full width 1920px) -->
@@ -165,6 +133,38 @@ const props = defineProps<{
     </div>
   </header>
 </template>
+
+<script setup lang="ts">
+import { ref } from "vue";
+import { Icon } from "@iconify/vue";
+
+const isMenuOpen = ref(false);
+
+const props = defineProps<{
+  links: Array<{
+    id: number;
+    label: string;
+    url: string;
+    hasDropdown: boolean;
+  }>;
+  users: Array<{
+    id: number;
+    label: string;
+    icon: string;
+    url: string;
+  }>;
+  phones: Array<{
+    id: number;
+    icon: string;
+    tel: string;
+  }>;
+  titles: Array<{
+    id: number;
+    title: string;
+    subtitle: string;
+  }>;
+}>();
+</script>
 
 <style scoped>
 .fade-enter-active,

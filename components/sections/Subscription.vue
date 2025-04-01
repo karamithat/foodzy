@@ -1,54 +1,63 @@
 <template>
-  <section class="py-12 bg-white px-4">
-    <div class="max-w-6xl mx-auto flex flex-col gap-8">
+  <section class="relative py-6 bg-white px-4 font-[quicksand]">
+    <div class="max-w-[85%] mx-auto flex flex-col gap-12 relative">
       <!-- Main Banner -->
       <div
-        class="bg-gradient-to-r from-[#645e33] to-[#222] rounded-2xl flex flex-col md:flex-row items-center justify-between overflow-hidden"
+        class="bg-gradient-to-r from-[#645e33] to-[#222] rounded-2xl relative flex flex-col md:flex-row items-start justify-between overflow-hidden min-h-[400px] p-6 md:p-12"
       >
-        <!-- Left Content -->
-        <div class="px-6 py-10 md:p-12 text-white flex flex-col gap-6 md:w-2/3">
-          <h2 class="text-3xl md:text-4xl font-bold">
-            Stay home & get your daily<br />
-            needs from our shop
+        <!-- Text Content -->
+        <div
+          class="text-white flex flex-col gap-6 z-10 relative w-full xl:w-1/3 my-5"
+        >
+          <h2 class="text-3xl md:text-4xl font-bold leading-snug">
+            {{ bannerContent.title }}
           </h2>
           <p class="text-sm md:text-base text-gray-200">
-            Start Your Daily Shopping with
-            <span class="text-green-400 font-semibold">Nest Mart</span>
+            {{ bannerContent.subtitle }}
+            <span class="text-green-400 font-semibold">{{
+              bannerContent.highlight
+            }}</span>
           </p>
 
-          <!-- Subscription Form -->
-          <div class="flex w-full">
-            <input
-              type="email"
-              placeholder="Your email address"
-              class="w-full py-3 px-4 rounded-l-full text-sm outline-none text-gray-700"
-            />
+          <!-- Form -->
+          <div
+            class="w-full max-w-md bg-white rounded-full shadow-sm overflow-hidden md:flex md:items-center"
+          >
+            <!-- Left: Icon + Input -->
+            <div class="flex items-center gap-2 px-4 py-3 text-gray-400 w-full">
+              <Icon :icon="formData.icon" width="24" height="24" />
+              <input
+                type="email"
+                :placeholder="formData.placeholder"
+                class="flex-1 bg-transparent text-sm text-gray-700 placeholder-gray-400 focus:outline-none"
+              />
+            </div>
+
+            <!-- Button -->
             <button
-              class="bg-red-500 text-white px-6 py-3 rounded-r-full hover:bg-red-600 transition"
+              class="w-full md:w-auto bg-[#f44336] text-white mr-7 px-9 py-4 text-sm font-semibold hover:bg-[#d9372d] transition rounded-full md:rounded-r-full"
             >
-              Subscribe
+              {{ formData.buttonText }}
             </button>
           </div>
         </div>
 
         <!-- Right Image -->
-        <div class="hidden md:block md:w-1/3 relative">
-          <img
-            src="../../assets/images/logo.png"
-            alt="Delivery Man"
-            class="object-contain w-full h-full"
-          />
-        </div>
+        <NuxtImg
+          :src="bannerImage"
+          alt="Delivery Man"
+          class="hidden md:block absolute bottom-0 right-20 w-[320px] md:w-[420px] lg:w-[540px]"
+        />
       </div>
 
       <!-- Features Section -->
-      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-1">
         <div
           v-for="feature in features"
           :key="feature.id"
           class="flex items-center gap-3 bg-gray-50 p-4 rounded-xl shadow-sm"
         >
-          <img :src="feature.icon" alt="icon" class="w-8 h-8" />
+          <NuxtImg :src="feature.icon" alt="icon" class="w-8 h-8" />
           <div>
             <h4 class="font-semibold text-sm">{{ feature.title }}</h4>
             <p class="text-xs text-gray-500">{{ feature.subtitle }}</p>
@@ -60,48 +69,26 @@
 </template>
 
 <script setup lang="ts">
-const features = [
-  {
-    id: 1,
-    icon: "/images/prices-icon.png",
-    title: "Best prices & offers",
-    subtitle: "Orders $50 or more",
-  },
-  {
-    id: 2,
-    icon: "/images/delivery-icon.png",
-    title: "Free delivery",
-    subtitle: "24/7 amazing services",
-  },
-  {
-    id: 3,
-    icon: "/images/daily-deal-icon.png",
-    title: "Great daily deal",
-    subtitle: "When you sign up",
-  },
-  {
-    id: 4,
-    icon: "/images/assortment-icon.png",
-    title: "Wide assortment",
-    subtitle: "Mega Discounts",
-  },
-  {
-    id: 5,
-    icon: "/images/returns-icon.png",
-    title: "Easy returns",
-    subtitle: "Within 30 days",
-  },
-];
+import { Icon } from "@iconify/vue";
+import { NuxtImg } from "#components";
+
+defineProps<{
+  bannerContent: {
+    title: string;
+    subtitle: string;
+    highlight: string;
+  };
+  formData: {
+    placeholder: string;
+    buttonText: string;
+    icon: string;
+  };
+  bannerImage: string;
+  features: {
+    id: number;
+    icon: string;
+    title: string;
+    subtitle: string;
+  }[];
+}>();
 </script>
-
-<style scoped>
-@media (max-width: 768px) {
-  h2 {
-    text-align: center;
-  }
-
-  .bg-gradient-to-r {
-    text-align: center;
-  }
-}
-</style>

@@ -22,9 +22,14 @@
     :title-line2="titleLine2"
     :dishes="dishes"
   /> -->
-  <Deals :products="dealsProducts" :settings="dealsSettings" />
-  <!-- <People /> -->
-  <!-- <Subscription />  -->
+  <!-- <Deals :products="dealsProducts" :settings="dealsSettings" /> -->
+  <!-- <People :leftImage="leftImage" :heading="heading" :features="features" /> -->
+  <!-- <Subscription
+    :bannerContent="bannerContent"
+    :formData="formData"
+    :bannerImage="bannerImage"
+    :features="features"
+  /> -->
   <!-- Diğer bölümleri de ekleyebilirsin -->
 </template>
 
@@ -36,8 +41,15 @@
 // import Daily from "../components/sections/Daily.vue";
 // import { dishes, subtitle, titleLine1, titleLine2 } from "~/data/menu/menuData";
 // import Menu from "../components/sections/Menu.vue";
-import { dealsProducts, dealsSettings } from "~/data/deals/dealsData";
-import Deals from "../components/sections/Deals.vue";
+// import { dealsProducts, dealsSettings } from "~/data/deals/dealsData";
+// import Deals from "../components/sections/Deals.vue";
+// import { features, heading, leftImage } from "~/data/people/whyChooseData";
 // import People from "../components/sections/People.vue";
 // import Subscription from "../components/sections/Subscription.vue";
+// import {
+//   bannerContent,
+//   formData,
+//   bannerImage,
+//   features,
+// } from "~/data/subs/bannerData";
 </script>

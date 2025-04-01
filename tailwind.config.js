@@ -16,6 +16,7 @@ module.exports = {
         inspiration: ["Inspiration", "sans-serif"],
         krona_one: ["Krona One", "sans-serif"],
         quicksand: ["Quicksand", "sans-serif"],
+        nunito: ["Nunito", "sans-serif"],
       },
       colors: {
         primary: {
