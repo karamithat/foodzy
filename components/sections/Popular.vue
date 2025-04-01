@@ -1,7 +1,7 @@
 <template>
-  <section class="py-10 flex flex-col items-center bg-gray-50 px-4">
+  <section class="py-10 flex flex-col items-center font-[inter] px-4">
     <span
-      class="uppercase text-red-500 text-xs font-semibold tracking-[3px] mb-2"
+      class="uppercase text-custom-red text-xs font-semibold tracking-[3px] mb-2 text-custom-red"
     >
       Customer Favorites
     </span>
