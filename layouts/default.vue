@@ -10,17 +10,13 @@ import { footerData } from "~/data/footer/footerData";
 
 <template>
   <div>
-    <!-- Navbar -->
     <Navbar
       :links="navigationLinks"
       :phones="phoneLinks"
       :users="userLinks"
       :titles="titleLinks"
     />
-
-    <!-- Sayfa içeriği -->
     <NuxtPage />
-
     <Footer :data="footerData" />
   </div>
 </template>

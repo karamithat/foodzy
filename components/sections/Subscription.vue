@@ -1,11 +1,9 @@
 <template>
   <section class="relative py-6 bg-white px-4 font-[quicksand]">
     <div class="max-w-[85%] mx-auto flex flex-col gap-12 relative">
-      <!-- Main Banner -->
       <div
         class="bg-gradient-to-r from-[#645e33] to-[#222] rounded-2xl relative flex flex-col md:flex-row items-start justify-between overflow-hidden min-h-[400px] p-6 md:p-12"
       >
-        <!-- Text Content -->
         <div
           class="text-white flex flex-col gap-6 z-10 relative w-full xl:w-1/3 my-5"
         >
@@ -51,7 +49,7 @@
       </div>
 
       <!-- Features Section -->
-      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-1">
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-1 lg:mb-6">
         <div
           v-for="feature in features"
           :key="feature.id"

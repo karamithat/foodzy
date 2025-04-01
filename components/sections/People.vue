@@ -2,7 +2,6 @@
   <section class="py-10 bg-white font-[nunito]">
     <div class="max-w-7xl mx-auto px-4">
       <div class="flex flex-col lg:flex-row items-start gap-10">
-        <!-- Left Side: Image (1/3 genişlik) -->
         <div class="shrink-0 lg:w-1/3 w-full">
           <div
             class="relative w-full h-[320px] lg:h-[360px] overflow-hidden rounded-2xl"
@@ -15,7 +14,6 @@
           </div>
         </div>
 
-        <!-- Right Side: Content (2/3 genişlik) -->
         <div class="flex-1 lg:w-2/3">
           <h2 class="text-3xl lg:text-4xl font-bold text-gray-800 mb-6">
             {{ heading }}
@@ -23,7 +21,7 @@
 
           <div class="flex flex-col gap-6">
             <div
-              v-for="item in features"
+              v-for="item in featured"
               :key="item.id"
               class="flex gap-4 items-start bg-gray-50 p-4 rounded-xl shadow-sm"
             >
@@ -58,7 +56,7 @@ import { NuxtImg } from "#components";
 const props = defineProps<{
   leftImage: string;
   heading: string;
-  features: Array<{
+  featured: Array<{
     id: number;
     title: string;
     description: string;

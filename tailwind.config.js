@@ -17,6 +17,7 @@ module.exports = {
         krona_one: ["Krona One", "sans-serif"],
         quicksand: ["Quicksand", "sans-serif"],
         nunito: ["Nunito", "sans-serif"],
+        montserrat: ["Montserrat", "sans-serif"],
       },
       colors: {
         primary: {

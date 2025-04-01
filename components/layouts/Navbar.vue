@@ -1,6 +1,6 @@
 <template>
   <header class="bg-white">
-    <!-- Top Navigation Bar (full width 1920px) -->
+    <!-- Top Navigation Bar  -->
     <div class="shadow-md">
       <div
         class="mx-auto max-w-screen-xl h-[55px] flex justify-between items-center px-4"
@@ -10,7 +10,6 @@
           <img src="/images/toggle.png" alt="Toggle" />
         </button>
 
-        <!-- Desktop Navigation Menu -->
         <ul
           class="hidden lg:flex space-x-6 font-[Poppins] font-medium text-sm leading-5 tracking-[0.48px] items-center"
         >
@@ -28,7 +27,6 @@
                 class="ml-1"
               />
 
-              <!-- Hover underline effect -->
               <span
                 class="absolute bottom-0 left-0 w-0 group-hover:w-full h-[2px] bg-red-500 transition-all duration-300"
               ></span>
@@ -36,7 +34,6 @@
           </li>
         </ul>
 
-        <!-- Right phone number -->
         <div
           v-for="phone in phones"
           :key="phone.id"
@@ -48,7 +45,6 @@
       </div>
     </div>
 
-    <!-- Mobile Menu Dropdown -->
     <transition name="fade">
       <nav
         v-if="isMenuOpen"
@@ -65,26 +61,19 @@
       </nav>
     </transition>
 
-    <!-- Bottom Section (full width 1920px) -->
     <div class="py-2 shadow-sm">
       <div
         class="max-w-screen-xl mx-auto px-4 flex flex-wrap items-center justify-between gap-y-3"
       >
-        <!-- Logo -->
         <div class="flex items-center gap-2 flex-shrink-0 order-1 font-[inter]">
-          <img
-            src="../../public/images/logo.png"
-            alt="Foodzy"
-            width="82"
-            height="82"
-          />
+          <NuxtImg src="/images/logo.png" alt="Foodzy" width="82" height="82" />
           <div v-for="title in titles" :key="title.id">
             <h1 class="font-[900] text-[24px]">{{ title.title }}</h1>
             <p class="text-xs font-semibold text-[#]">{{ title.subtitle }}</p>
           </div>
         </div>
 
-        <!-- Account Actions -->
+        <!-- Account -->
         <div
           class="flex items-center gap-4 text-sm flex-shrink-0 order-2 lg:order-3 font-poppins font-medium text-[15px] tracking-[0.48px]"
         >

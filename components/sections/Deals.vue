@@ -1,7 +1,6 @@
 <template>
   <section class="py-10 bg-white">
     <div class="max-w-[1600px] mx-auto px-4">
-      <!-- Header -->
       <div class="flex justify-between items-center mb-8">
         <h2 class="text-3xl font-bold text-gray-900">{{ settings.title }}</h2>
         <a
@@ -19,14 +18,12 @@
           :key="product.id"
           class="relative w-full max-w-sm mx-auto"
         >
-          <!-- Ürün Görseli -->
           <img
             :src="product.image"
             :alt="product.title"
             class="w-full h-80 object-cover rounded-2xl"
           />
 
-          <!-- Ürün Bilgi Kutusu -->
           <div
             class="absolute left-1/2 -translate-x-1/2 -bottom-6 bg-white w-[90%] rounded-2xl shadow-md px-5 py-4 z-10"
           >
@@ -40,12 +37,12 @@
               <span class="ml-1 text-gray-400">({{ product.rating }})</span>
             </div>
 
-            <!-- Marka -->
+            <!-- Brand -->
             <p class="text-sm text-gray-400 mt-1">
               By <span class="text-green-500">{{ product.brand }}</span>
             </p>
 
-            <!-- Fiyat ve Buton -->
+            <!-- Price ve Button -->
             <div class="flex justify-between items-center mt-3">
               <div>
                 <span class="text-lg font-semibold text-green-500">

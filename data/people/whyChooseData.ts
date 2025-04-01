@@ -1,7 +1,7 @@
 // data/whyChooseData.ts
 export const leftImage = "/images/why.png";
 export const heading = "Why People Choose us?";
-export const features = [
+export const featured = [
   {
     id: 1,
     title: "Convenient and Reliable",

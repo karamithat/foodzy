@@ -17,14 +17,14 @@
         </div>
 
         <!-- Carousel Buttons -->
-        <div class="flex gap-2 mt-4 md:mt-0">
+        <div class="flex gap-6 mt-4 md:mt-0">
           <button
-            class="w-10 h-10 rounded-full bg-gray-100 text-gray-500 hover:bg-red-500 hover:text-white transition"
+            class="w-10 h-10 rounded-full bg-gray-100 text-gray-500 hover:bg-red-500 hover:text-white transition cursor-pointer"
           >
             &lt;
           </button>
           <button
-            class="w-10 h-10 rounded-full bg-red-500 text-white hover:bg-red-600 transition"
+            class="w-10 h-10 rounded-full bg-red-500 text-white hover:bg-red-600 transition cursor-pointer"
           >
             &gt;
           </button>
@@ -43,7 +43,7 @@
           <!-- Heart Button -->
           <button
             @click="toggleFavorite(index)"
-            class="absolute top-0 right-0 bg-red-500 text-white p-4 rounded-tr-[17px] rounded-bl-3xl hover:bg-red-600 transition"
+            class="absolute top-0 right-0 bg-red-500 text-white p-4 rounded-tr-[17px] rounded-bl-3xl hover:bg-red-600 transition cursor-pointer"
           >
             <Icon
               :icon="dish.isFavorite ? 'mdi:heart' : 'mdi:cards-heart-outline'"
@@ -52,14 +52,12 @@
             />
           </button>
 
-          <!-- Image -->
           <NuxtImg
             :src="dish.image"
             :alt="dish.title"
             class="w-48 h-48 object-cover rounded-full mb-3"
           />
 
-          <!-- Text -->
           <div class="w-full text-left">
             <h3 class="text-lg font-semibold text-gray-800 mb-1">
               {{ dish.title }}
@@ -75,10 +73,22 @@
 <script setup lang="ts">
 import { ref } from "vue";
 import { Icon } from "@iconify/vue";
-import { subtitle, titleLine1, titleLine2, dishes } from "~/data/menu/menuData";
+import { NuxtImg } from "#components";
 
-// Create reactive copy of dishes to toggle favorites
-const localDishes = ref([...dishes]);
+const props = defineProps<{
+  subtitle: string;
+  titleLine1: string;
+  titleLine2: string;
+  dishes: {
+    id: number;
+    title: string;
+    description: string;
+    image: string;
+    isFavorite: boolean;
+  }[];
+}>();
+
+const localDishes = ref([...props.dishes]);
 
 const toggleFavorite = (index: number) => {
   localDishes.value[index].isFavorite = !localDishes.value[index].isFavorite;

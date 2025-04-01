@@ -1,6 +1,5 @@
 <template>
   <section class="max-w-[1610px] mx-auto py-10 px-4 font-[quicksand]">
-    <!-- ✅ Header -->
     <div class="flex justify-between items-center mb-6">
       <h2 class="text-xl sm:text-2xl font-bold text-[#253D4E]">
         Daily Best Sells
@@ -16,7 +15,6 @@
       </ul>
     </div>
     <div class="flex flex-col md:flex-row gap-6">
-      <!-- Left Banner -->
       <div
         class="bg-cover bg-center w-full md:w-1/4 min-h-[300px] md:h-[520px] rounded-xl relative overflow-hidden"
       >
@@ -31,17 +29,12 @@
           <h2 class="text-white font-bold text-2xl md:text-4xl leading-tight">
             {{ bannerTitle }}
           </h2>
-          <BaseButton>
-            {{ bannerButtonText }}
-            <Icon :icon="bannerButtonIcon" width="24" height="24" />
-          </BaseButton>
+          <BaseButton :label="bannerButtonText" :icon="bannerButtonIcon" />
         </div>
       </div>
 
-      <!-- Product Cards -->
       <div class="flex-1 overflow-x-auto">
         <div class="relative flex-1">
-          <!-- Left Arrow (only visual) -->
           <div
             class="hidden lg:flex items-center justify-center absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white border border-gray-300 rounded-full w-10 h-10 shadow-md"
           >
@@ -55,7 +48,6 @@
               :key="product.id"
               class="bg-white border border-gray-200 rounded-[15px] p-4 relative flex flex-col justify-between h-[520px]"
             >
-              <!-- Badge -->
               <div
                 class="absolute top-0 left-0 px-3 py-1 rounded-br-2xl rounded-tl-xl text-white text-sm font-semibold"
                 :class="{
@@ -68,7 +60,6 @@
                 {{ product.badgeText }}
               </div>
 
-              <!-- Image -->
               <div class="flex justify-center items-center h-[260px] mb-4">
                 <NuxtImg
                   :src="product.image"
@@ -77,7 +68,6 @@
                 />
               </div>
 
-              <!-- Info -->
               <div class="text-sm text-left flex flex-col gap-2">
                 <p class="text-gray-400">{{ product.brand }}</p>
                 <h3 class="text-gray-800 font-semibold">{{ product.title }}</h3>
@@ -92,7 +82,6 @@
                 </div>
               </div>
 
-              <!-- Bottom -->
               <div class="mt-4">
                 <div class="bg-gray-200 h-1.5 rounded overflow-hidden">
                   <div
@@ -104,11 +93,10 @@
                   {{ soldLabel }} {{ product.sold }}/{{ product.stock }}
                 </span>
                 <BaseButton
+                  :label="bannerButtonText"
+                  :icon="cartButtonIcon"
                   class="mt-4 w-full flex items-center justify-center"
-                >
-                  <Icon :icon="cartButtonIcon" width="24" height="24" />
-                  {{ cartButtonText }}
-                </BaseButton>
+                />
               </div>
             </div>
           </div>

@@ -5,7 +5,7 @@
     <div
       class="max-w-screen-xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
     >
-      <!-- Logo ve iletişim bilgileri -->
+      <!-- Logo and Contact -->
       <div>
         <div class="flex items-center mb-4">
           <NuxtImg
@@ -79,7 +79,7 @@
           </button>
         </div>
 
-        <!-- Sosyal medya iconları -->
+        <!-- Social Media -->
         <div class="flex space-x-1 mb-4">
           <a
             v-for="(social, index) in data.socials"
@@ -91,7 +91,6 @@
           </a>
         </div>
 
-        <!-- Fotoğraf küçük resimler -->
         <div class="grid grid-cols-5 gap-2">
           <NuxtImg
             v-for="(thumb, index) in data.thumbnails"
@@ -104,7 +103,7 @@
       </div>
     </div>
 
-    <!-- Alt footer kısmı -->
+    <!-- Bottom footer -->
     <div class="mt-8 border-t border-gray-200">
       <div
         class="max-w-screen-xl mx-auto pt-6 px-4 lg:px-20 text-sm text-center text-gray-600"
