@@ -39,7 +39,7 @@ const props = defineProps<{
       >
         <!-- Mobile Hamburger Menu -->
         <button @click="isMenuOpen = !isMenuOpen" class="p-2">
-          <img src="~/assets/images/toggle.png" alt="Toggle" />
+          <img src="/images/toggle.png" alt="Toggle" />
         </button>
 
         <!-- Desktop Navigation Menu -->
@@ -105,7 +105,7 @@ const props = defineProps<{
         <!-- Logo -->
         <div class="flex items-center gap-2 flex-shrink-0 order-1 font-[inter]">
           <img
-            src="~/assets/images/logo.png"
+            src="../../public/images/logo.png"
             alt="Foodzy"
             width="82"
             height="82"

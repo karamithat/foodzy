@@ -1,19 +1,26 @@
-/** @type {import('tailwindcss').Config} */
+// tailwind.config.js
 module.exports = {
   content: [
     "./components/**/*.{vue,js,ts}",
     "./layouts/**/*.vue",
     "./pages/**/*.vue",
-    "./plugins/**/*.{js,ts}",
+    "./plugins/**/*.ts",
     "./app.vue",
   ],
   theme: {
     extend: {
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],
+        segoe: ["Segoe UI", "Tahoma", "Geneva", "Verdana", "sans-serif"],
         inter: ["Inter", "sans-serif"],
         inspiration: ["Inspiration", "sans-serif"],
-        krona: ["Krona One", "sans-serif"],
+        krona_one: ["Krona One", "sans-serif"],
+        quicksand: ["Quicksand", "sans-serif"],
+      },
+      colors: {
+        primary: {
+          red: "#F53E32",
+        },
       },
     },
   },
